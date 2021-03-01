@@ -10,3 +10,14 @@ A player would activate one of the locations in the quest. To score that locatio
 - Database - My SQL
 - ORM - Hibernate
 - Platform - Web Application 
+
+## Benefits
+
+* Improves the ability to think in logical way.
+* Encourages teamwork Attitude.
+* Thinking out of the box.
+* Interacting with new people.
+* Improves Leadership Skills.
+* Builds problem Solving Ability.
+* Improves Imagination.
+* Exploring new locations.
