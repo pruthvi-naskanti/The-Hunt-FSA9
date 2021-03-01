@@ -15,6 +15,7 @@ There will be two colors in the application, when the user touches the first col
 - Platform - Web Application 
 - Laguages - Java
 - Tools - Eclipse/NetBeans, SQL Developer
+- Libraries - geoip2 is used for the geolocations
 
 ## Benefits
 
