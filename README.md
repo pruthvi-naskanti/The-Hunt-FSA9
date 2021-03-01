@@ -6,10 +6,12 @@ A player would activate one of the locations in the quest. To score that locatio
 
 ## Technology Stack
 
-- Framework: Spring Boot
+- Framework - Spring Boot
 - Database - My SQL
 - ORM - Hibernate
 - Platform - Web Application 
+- Laguages - Java
+- Tools - Eclipse/NetBeans, SQL Developer
 
 ## Benefits
 
