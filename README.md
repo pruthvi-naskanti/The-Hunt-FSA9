@@ -30,5 +30,5 @@ There will be two colors in the application, when the user touches the first col
 
 ## Heroku Link
 
-https://git.heroku.com/springfsatest.git
+https://huntappgame.herokuapp.com/
 
