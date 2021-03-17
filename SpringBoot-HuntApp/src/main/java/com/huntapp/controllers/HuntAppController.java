@@ -1,13 +1,13 @@
 package com.huntapp.controllers;
 
-import com.huntapp.models.*;
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
-
 import com.huntapp.repository.LocationRepository;
-
 @Controller
 public class HuntAppController {
 
@@ -24,8 +24,6 @@ public class HuntAppController {
 	@RequestMapping("/addloc")
 	public ModelAndView AddLocation() {
 		mav.setViewName("addlocation");
-		//Iterable<AddLocation> Loc=locrepo.findAll();
-		//mav.addObject("Loc",Loc);
 		return mav;
 	}
 	

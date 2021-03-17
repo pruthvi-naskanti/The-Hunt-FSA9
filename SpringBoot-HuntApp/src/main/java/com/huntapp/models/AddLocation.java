@@ -3,11 +3,9 @@ package com.huntapp.models;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import org.springframework.context.annotation.Bean;
+@Entity
 public class AddLocation {
 
-	@Entity
-	public class Locations {
 		
 		@Id
 		private int Id;
@@ -37,5 +35,5 @@ public class AddLocation {
 		}
 		
 		
-	}
+	
 }
