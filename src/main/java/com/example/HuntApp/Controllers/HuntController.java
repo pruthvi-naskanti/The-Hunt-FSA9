@@ -94,4 +94,10 @@ public class HuntController {
         return home();
     }
     
+    @RequestMapping("yashwanth")
+    public ModelAndView yashwanth() {
+    	mv.setViewName("yashwanth.html");
+    	return mv;
+    }
+    
 }
