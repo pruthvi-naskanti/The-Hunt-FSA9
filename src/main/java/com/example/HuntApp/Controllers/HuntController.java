@@ -100,4 +100,9 @@ public class HuntController {
     	return mv;
     }
     
+    @RequestMapping("pruthvi")
+    public ModelAndView pruthvi() {
+    	mv.setViewName("pruthvi.html");
+    	return mv;
+    }
 }
