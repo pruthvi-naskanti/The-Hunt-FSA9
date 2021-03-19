@@ -47,7 +47,7 @@ and open the template in the editor.
             }
 
         </style>
-        <title>Add New Genre</title>
+        <title>Add New Location</title>
     </head>
     <body>
         <div class="container">
@@ -57,22 +57,22 @@ and open the template in the editor.
             <form th:action="LocationAdded">
                 <div class="form-group col-md-6">
                     <label>Enter ID</label>
-                    <input type="number" name="Location_id" class="form-control" placeholder="Enter Genre ID" required>
+                    <input type="number" name="Location_id" class="form-control" placeholder="Enter Location ID" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label>Enter Name</label>
-                    <input type="text" name="Locaton_name" class="form-control" placeholder="Enter Genre Type">
+                    <input type="text" name="Locaton_name" class="form-control" placeholder="Enter Location Name">
                 </div>
                 <div class="form-group col-md-6">
                     <label>Enter Latitude</label>
-                    <input type="number" name="Latitude" class="form-control" placeholder="Enter Latitude" required>
+                    <input type="number" step="any" name="Latitude" class="form-control" placeholder="Enter Latitude" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label>Enter Longitude</label>
-                    <input type="number" name="Longitude" class="form-control" placeholder="Enter Longitude" required>
+                    <input type="number" step="any" name="Longitude" class="form-control" placeholder="Enter Longitude" required>
                 </div>
  
-                <button type="submit" class="btn btn-primary">Click to add Genre Type</button>
+                <button type="submit" class="btn btn-primary">Click to add Location</button>
 
             </form>
             <br/>
