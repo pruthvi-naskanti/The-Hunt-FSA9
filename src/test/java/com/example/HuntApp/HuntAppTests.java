@@ -1,10 +1,10 @@
-package com.huntapp;
+package com.example.HuntApp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApplicationTests {
+class HuntAppTests {
 
 	@Test
 	void contextLoads() {

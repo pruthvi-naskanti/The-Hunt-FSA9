@@ -1,8 +1,12 @@
+
 <!DOCTYPE html>
-
-<html>
-
-<head>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
     <title>The-Hunt-App</title>
     <link rel="icon" href="./logos/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="main.css">
@@ -72,8 +76,13 @@ article {
                    
                 </div>
              <div>
-            <form action="addloc">
+            <form th:action="addloc">
             <button type="addloc" class="btn btn-primary">Click to add Location</button>
+            </form>
+            </div>
+            <div>
+            <form th:action="location">
+            <button type="location" class="btn btn-primary">View Locations</button>
             </form>
             </div>
             </div>
@@ -92,7 +101,6 @@ article {
             <i style="font-size:24px"></i>
             <a href="https://github.com/pruthvi-naskanti/The-Hunt-FSA9">GitHub Source Code</a>
 </footer>
-
 
 
 </html>
