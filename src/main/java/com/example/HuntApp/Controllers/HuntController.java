@@ -22,10 +22,7 @@ import com.example.HuntApp.Repository.LocationRepository;
 public class HuntController {
 
     ModelAndView mv = new ModelAndView();
-    //@Autowired
-    //MovieRepository MovieRepo;
-    //@Autowired
-    //OTTRepositoryRepository OTTRepo;
+
     @Autowired
     LocationRepository LoRepo;
 
@@ -40,24 +37,6 @@ public class HuntController {
         mv.setViewName("index");
         return mv;
     }
-
-    @RequestMapping("addMovie")
-    public ModelAndView addMovie() {
-        mv.setViewName("addNewMovie.html");
-        //Iterable<OTTPlatform> MovieList = OTTRepo.findAll();
-        //mv.addObject("OTTs", MovieList);
-        Iterable<Location> GnList = LoRepo.findAll();
-        mv.addObject("Genres", GnList);
-        return mv;
-
-    }
-
-    @RequestMapping("addOTT")
-    public ModelAndView addOTT() {
-        mv.setViewName("addNewOTT.html");
-        return mv;
-    }
-
 
 
     @RequestMapping("LocationAdded")
