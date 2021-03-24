@@ -76,24 +76,18 @@ article {
                    
                 </div>
              <div>
-            <form th:action="addloc">
-            <button type="addloc" class="btn btn-primary">Click to add Location</button>
+            <form th:action="addlocation">
+            <button type="addlocation" class="btn btn-primary">Click to add Location</button>
             </form>
             </div>
             <div>
-            <form th:action="location">
-            <button type="location" class="btn btn-primary">View Locations</button>
-            </form>
-            </div>
-             <div>
-            <form th:action="yashwanth">
-            <button type="yashwanth" class="btn btn-primary">Yashwanth-About Me</button>
-            </form>
-            </div>
-            <div>
-            <form th:action="pruthvi">
-            <button type="pruthvi" class="btn btn-primary">Pruthvi-About Me</button>
-            </form>
+            <form action="#" th:action="@{/locations}" th:object="${locations}"
+			method="get">
+			<button type="submit" class="btn btn-primary">View Locations</button>
+		</form>
+            <!-- <form th:action="location">
+            <button type="locations" class="btn btn-primary">View Locations</button>
+            </form> -->
             </div>
             </div>
          

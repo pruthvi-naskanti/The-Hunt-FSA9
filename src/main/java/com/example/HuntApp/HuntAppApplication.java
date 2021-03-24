@@ -1,13 +1,13 @@
-package com.example.HuntApp;
+package com.example.huntapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HuntApplication {
+public class HuntAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HuntApplication.class, args);
+		SpringApplication.run(HuntAppApplication.class, args);
 	}
 
 }

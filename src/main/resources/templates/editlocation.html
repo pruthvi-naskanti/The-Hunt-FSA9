@@ -1,87 +1,94 @@
-
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-
 <html xmlns="http://www.w3.org/1999/xhmtl"
-      xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <title>Edit Location</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-              crossorigin="anonymous">
+	xmlns:th="http://www.thymeleaf.org">
 
-        <style>
-            .home{
-                margin: 0;
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            .topnav {
-                overflow: hidden;
-                background-color: #333;
-            }
+<head>
+<title>Edit Location</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
 
-            .topnav a {
-                float: left;
-                color: #f2f2f2;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-                font-size: 17px;
-            }
+	<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  
+  
+}
 
-            .topnav a:hover {
-                background-color: #ddd;
-                color: black;
-            }
+.c {
+  position: absolute;
+  left: 125px;  
+  width: 200px;
+  height: 120px;
+  
+} 
+ 
+.button5 {background-color: #4CAF50;}
+.button6 {background-color: #f44336;}
+</style>
 
-            .topnav a.active {
-                background-color: #4CAF50;
-                color: white;
-            }
+</head>
+<body>
+	<div class="container">
+		<h2>Location Edit</h2>
+		<br /> <br />
+		<form action="#"
+			th:action="@{/location/update/{id}(id=${location.id})}"
+			th:object="${location}" method="post">
+			<label for="location_name">Name</label> 
+			</br>
+			<input type="text"
+				th:field="*{location_name}" id="location_name"
+				placeholder="Location Name"> 
+				</br>
+				<span th:if="${#fields.hasErrors('location_name')}"
+				th:errors="*{location_name}"></span> 
+				</br>
+				<label for="latitude">Latitude</label>
+				</br>
+			<input type="text" th:field="*{latitude}" id="latitude"
+				placeholder="Latitude"> 
+				</br>
+				<span th:if="${#fields.hasErrors('latitude')}" th:errors="*{latitude}"></span>
+				</br>
+			<label for="longitude">Longitude</label> 
+			</br>
+     		<input type="text"
+				th:field="*{longitude}" id="longitude" placeholder="Longitude">
+			<span th:if="${#fields.hasErrors('longitude')}"
+				th:errors="*{longitude}"></span> 
+				</br>
+				</br>
+				<input type="submit" class="button button5"
+				value="Click to update location">
+		</form>
 
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <h2>Edit Location</h2> 
-            <br/>
-            <br/>
-            <form th:action = "editlocation" th:object="${location}">
-                <p th:text="Updating+' '+${location}"/>
 
-                <div class="form-group col-md-6">
-                    <label>Enter Location Id</label>
-                    <input type="number" th:field="*{Location_id}" name="Location_id" class="form-control" placeholder="Enter Location Id" required>
-                </div>
+	</div>
+	
+	</br>
+	</br>
+	<div class="c">
+		 <form th:action="cancel">
+            <button type="cancel" class="button button6">Back</button>
+        </form>
+	</div>
 
-                <div class="form-group col-md-6">
-                    <label>Enter Location Name</label>
-                    <input type="text" th:field="*{Locaton_name}" name="Locaton_name" class="form-control" placeholder="Enter Location Name">
-                </div>
-                <div class="form-group col-md-6">
-                    <label>Enter Longitude</label>
-                    <input type="text" th:field="*{Longitude}" name="Longitude"  class="form-control" placeholder="Enter Longitude">
-                </div>
-
-                <div class="form-group col-md-6">
-                    <label>Enter Latitude</label>
-                    <input type="number" step="0.1" th:field="*{Latitude}" name="Latitude" class="form-control" placeholder="Enter IMDB Rating">
-                </div>
-
-              <button type="submit" class="btn btn-primary">Click to Update Location Details</button>
-            </form>
-              
-            <br/>
-            <form th:action="cancel">
-                <button type="Cancel" class="btn btn-danger">Cancel</button>
-            </form>
-
-        </div>
-    </body>
+</body>
 </html>
