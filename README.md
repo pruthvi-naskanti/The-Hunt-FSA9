@@ -32,3 +32,11 @@ There will be two colors in the application, when the user touches the first col
 
 https://huntappgame.herokuapp.com/
 
+## URL to view locations
+
+https://huntappgame.herokuapp.com/addlocation?
+
+## URL to add locations
+
+https://huntappgame.herokuapp.com/addlocation?
+
