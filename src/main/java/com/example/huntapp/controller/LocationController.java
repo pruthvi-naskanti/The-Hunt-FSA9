@@ -1,5 +1,9 @@
 package com.example.huntapp.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 import javax.annotation.Resource;
 import javax.validation.Valid;
 
@@ -80,6 +84,21 @@ public class LocationController {
 		locationRepository.delete(location);
 		ModelAndView mav = new ModelAndView("redirect:/locations");
 		return mav;
+	}
+	
+	@RequestMapping(value = "/location/random", method = RequestMethod.GET)
+	public ModelAndView getRandomLocation() {
+		mv.setViewName("index");
+		List<Location> locationsList = (List<Location>) locationRepository.findAll();
+		List<Long> idList = new ArrayList<Long>();
+		for (Location l : locationsList) {
+			idList.add(l.getId());
+		}
+		Random random = new Random();
+		int rand = random.nextInt(locationsList.size());
+		Location randomLocation = locationsList.get(rand);
+		mv.addObject("location",randomLocation);
+		return mv;
 	}
 
 }
