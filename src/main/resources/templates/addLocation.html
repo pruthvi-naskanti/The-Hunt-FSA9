@@ -54,22 +54,22 @@ and open the template in the editor.
 
             <h2>Add New Location</h2>
             
-            <form th:action="@{/location/create}" th:object="${location}" method="post">
+            <form th:action="@{/location/create}" th:object="${location}" method="post" action="/action_page.php">
                <!--  <div class="form-group col-md-6">
                     <label>Enter ID</label>
                     <input type="number" name="Location_id" class="form-control" placeholder="Enter Location ID" required>
                 </div> -->
                 <div class="form-group col-md-6">
                     <label>Enter Name</label>
-                    <input type="text" name="Location_name" class="form-control" placeholder="Enter Location Name">
+                    <input type="text" name="Location_name" pattern="[A-Za-z]" class="form-control" placeholder="Enter Location Name" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label>Enter Latitude</label>
-                    <input type="number" step="any" name="Latitude" class="form-control" placeholder="Enter Latitude" required>
+                    <input type="number" step="any" max="90" min="-90" name="Latitude" class="form-control" placeholder="Enter Latitude" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label>Enter Longitude</label>
-                    <input type="number" step="any" name="Longitude" class="form-control" placeholder="Enter Longitude" required>
+                    <input type="number" step="any" max="180" min="-180" name="Longitude" class="form-control" placeholder="Enter Longitude" required>
                 </div>
  
                 <button type="submit" class="btn btn-primary">Click to add Location</button>

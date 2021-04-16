@@ -9,7 +9,7 @@ and open the template in the editor.
 <head>
 <title>The-Hunt-App</title>
 <link rel="icon" href="./logos/Logo.png" type="image/x-icon">
-<!-- <link rel="stylesheet" href="main.css"> -->
+
 <link
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
 	rel="stylesheet" />
@@ -49,6 +49,7 @@ article {
 	margin-left: 2px;
 	border: 1px solid #ccc;
 }
+
 #status1 {
 	height: 200px;
 	width: 200px;
@@ -69,39 +70,53 @@ article {
 }
 </style>
 </head>
-
+<!-- th:text="${location.location_name} -->
 <body>
 	<main>
 		<header>
 			<h1>The Hunt App</h1>
 		</header>
 		<article>
-	
-	<div>
+
+			<div>
 				<div id="container">
 
-					 <div id="status"> 
-	
-	                   <form action="#" th:action="@{/location/random}"
-						th:object="${location}" method="get">
-						<p class="card-text" th:each="location: ${location}">
+					<div id="status">
 
-							<span th:text="${location.location_name}"></span>
+						<!--  <form action="#" th:action="@{/location/random}" -->
+						<div>
+							<!-- th:object="${location}" method="get"> -->
+							<!-- <p class="card-text" 
+								th:each="location: ${location}"> -->
+								
+								<span id="spa"> </span>
+
+								<span   id=spa1 th:text="${location.location_name}"></span>
+								
+									
+								
+
+							</p>
+
 							
-						</p>
+<br>
+<br>
+							<!--  <button id="status2" type="submit" class="btn"
+								th:onclick="getRandomLocation()">Hunt Location</button>  -->
+								
+</div>
+						<!-- </form> -->
 						
-						<button id="status2" type="submit" class="btn btn-primary"
-							th:onclick="getRandomLocation()">Hunt Location</button>
-					</form>
+
 					</div>
-					
+
 					<div id="status1" onclick="getLoc()" type="submit">
 						<p id="demo"></p>
 					</div>
 				</div>
-			
+
 				<div>
-					<form th:action="addlocation">
+					<form action="#" th:action="@{/addlocation}" th:object="${addlocation}">
 						<button type="addlocation" class="btn btn-primary">Click
 							to add Location</button>
 					</form>
@@ -113,34 +128,12 @@ article {
 							Locations</button>
 					</form>
 				</div>
-				</div>
-			
+			</div>
+
 		</article>
+		<script type="text/javascript" th:src="@{js/script.js}"></script>
 	</main>
-	<script>
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-		crossorigin="anonymous"
-		
-		var x=document.getElementById("demo");
-			function
-					getLoc() {
-			  if
-					(navigator.geolocation) {
-			    navigator.geolocation.getCurrentPosition(showPosition);
-			  } else { 
-			    x.innerHTML="Geolocation is not supported by this browser."
-					;
-			  }
-			}
-			function
-					showPosition(position) {
-			  x.innerHTML="Latitude: "+ position.coords.latitude + 
-			  "<br>Longitude: " + position.coords.longitude;
-			}
-			
-			
-	</script>
+	
 </body>
 <footer id="foot">
 
