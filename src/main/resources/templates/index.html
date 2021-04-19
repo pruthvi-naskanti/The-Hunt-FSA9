@@ -82,6 +82,7 @@ article {
 				<div id="container">
 
 					<div id="status">
+					<p>Click to start</p>
 
 						<!--  <form action="#" th:action="@{/location/random}" -->
 						<div>
@@ -91,7 +92,7 @@ article {
 								
 								<span id="spa"> </span>
 
-								<span   id=spa1 th:text="${location.location_name}"></span>
+								<span   id=spa1 th:text="${location.location_name}" ></span>
 								
 									
 								
@@ -128,11 +129,21 @@ article {
 							Locations</button>
 					</form>
 				</div>
+				
 			</div>
 
 		</article>
 		<script type="text/javascript" th:src="@{js/script.js}"></script>
 	</main>
+	
+	<script th:inline="javascript">
+
+	/*<![CDATA[*/
+	let pos3=/*[[${location.latitude}]]*/"Test";
+	let pos4=/*[[${location.longitude}]]*/"Test"
+	/*]]>*/
+	
+</script>
 	
 </body>
 <footer id="foot">
