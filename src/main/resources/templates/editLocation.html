@@ -53,24 +53,24 @@ and open the template in the editor.
 			th:object="${location}" method="post">
 			<label for="location_name">Name</label> 
 			</br>
-			<input type="text"
+			<input type="text" onkeypress="return /[a-z]/i.test(event.key)"
 				th:field="*{location_name}" id="location_name"
-				placeholder="Location Name"> 
+				placeholder="Location Name" required> 
 				</br>
 				<span th:if="${#fields.hasErrors('location_name')}"
 				th:errors="*{location_name}"></span> 
 				</br>
 				<label for="latitude">Latitude</label>
 				</br>
-			<input type="text" th:field="*{latitude}" id="latitude"
-				placeholder="Latitude"> 
+			<input type="number" th:field="*{latitude}" id="latitude" step="any" max="90" min="-90"
+				placeholder="Latitude" required> 
 				</br>
 				<span th:if="${#fields.hasErrors('latitude')}" th:errors="*{latitude}"></span>
 				</br>
 			<label for="longitude">Longitude</label> 
 			</br>
-     		<input type="text"
-				th:field="*{longitude}" id="longitude" placeholder="Longitude">
+     		<input type="number" step="any" max="180" min="-180"
+				th:field="*{longitude}" id="longitude" placeholder="Longitude" required>
 			<span th:if="${#fields.hasErrors('longitude')}"
 				th:errors="*{longitude}"></span> 
 				</br>
