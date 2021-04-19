@@ -71,7 +71,7 @@ function showPosition(position) {
 	let lon2 = financial(pos2);
 	let lat1 = financial(pos3);
 	let lon1 = financial(pos4);
-	let ddd = distance(lat1, lon1, lat2, lon2, "k");
+	let ddd = distance(lat1, lon1, lat2, lon2,"K");
 	
 	let msg ="";
 	if(ddd<= 40){
@@ -100,15 +100,7 @@ function showPosition(position) {
 		//return lat2, lon2;
 }
 
-
-
-
-function start() {
-		let confirmation1 = "Treasure is ready";
-		color.innerHTML=confirmation1;
-	}
-	
-	
+		
 	function distance(lat1, lon1, lat2, lon2, unit) {
 	if ((lat1 == lat2) && (lon1 == lon2)) {
 		return 0;
@@ -139,3 +131,6 @@ function start() {
   return Number.parseFloat(x).toFixed(6);
 	
 }
+
+
+
