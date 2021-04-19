@@ -61,6 +61,15 @@ public class HuntController {
 	@RequestMapping("cancel")
 	public ModelAndView back() {
 		mv.setViewName("index");
+		List<Location> locationsList = (List<Location>) locationRepository.findAll();
+		List<Long> idList = new ArrayList<Long>();
+		for (Location l : locationsList) {
+			idList.add(l.getId());
+		}
+		Random random = new Random();
+		int rand = random.nextInt(locationsList.size());
+		Location randomLocation = locationsList.get(rand);
+		mv.addObject("location", randomLocation);
 		return mv;
 	}
 
