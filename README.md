@@ -11,11 +11,9 @@ There will be two colors in the application, when the user touches the first col
 
 - Framework - Spring Boot
 - Database - My SQL
-- ORM - Hibernate
 - Platform - Web Application 
-- Laguages - Java
-- Tools - Eclipse/NetBeans, SQL Developer
-- Libraries - geoip2 is used for the geolocations
+- Laguages - Java, HTML, Javascript
+- Tools - Eclipse/SpringToolSuite, MySQL Workbench
 
 ## Benefits
 
